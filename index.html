@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-image:url('/static/grocery.jpg');
+            background-size:cover;
+            background-position:0% 0%;
+        }
+        h1,p {
+            color:white;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="my-card glow">
+
+    <h1>Welcome to Grocery Store</h1>
+    <p>Your one-stop shop for all your grocery needs!</p>
+    <p>Explore our products and enjoy shopping!</p>
+    <header>
+        <button onclick="window.location.href='/login'">Login</button>
+        <button onclick="window.location.href='/register'">Register</button>
+        <button onclick="window.location.href='/products'">Products</button>
+        <button onclick="window.location.href='/cart'">Cart</button>
+        <button onclick="window.location.href='/admin'">Admin</button>
+    </header>
+    </div>
+    </body>
+</html>

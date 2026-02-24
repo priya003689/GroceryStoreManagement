@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+    <button onclick="window.location.href='/products'">Continue Shopping</button>
+    <button onclick="window.location.href='/'">Home</button>
+    <button onclick="window.location.href='/logout'">Logout</button>
+</header>
+    <h2>Your Cart</h2>
+    {% for item in cart %}
+        <p>{{ item.name }} - {{ item.price }}/-</p>
+    {% endfor %}
+        <button onclick="window.location.href='/placeorder'">Proceed to Order</button>
+</body>
+</html>

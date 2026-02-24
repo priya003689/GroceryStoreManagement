@@ -1,0 +1,75 @@
+body { 
+    font-family: Arial;
+     background: linear-gradient(135deg, #5d979e, #52ccdc); 
+     text-align: center; }
+h1,h2
+ { 
+    color: green; 
+}
+a{
+     margin: 5px; 
+     text-decoration: none; 
+     color: green; 
+    }
+ header {
+            margin-bottom:20px;
+        }
+ header button {
+            margin: 0 10px;
+        }
+button {
+    background-color:blue; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+  .my-card {
+            text-align: center; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); 
+            margin: auto; 
+            width: fit-content; 
+            max-width: 600px;
+            position: relative;
+            top: 50%;
+            transform: translate(0%,0%);
+            background: linear-gradient(135deg, #43bb89, #276e51);
+            color: #fff;
+            font-size: 1.2rem;
+            transition: all 0.3s ease-in-out;
+            box-sizing: border-box;
+            padding: 30px;
+            border: 2px solid #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-weight: bold;
+            line-height: 1.5;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+        }
+        .my-card:hover {
+            transform: translateY(0%) scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        }
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px #2575fc, 0 0 10px #2575fc; }
+            50% { box-shadow: 0 0 20px #6a11cb, 0 0 30px #2575fc; }
+            100% { box-shadow: 0 0 5px #2575fc, 0 0 10px #2575fc; }
+        }
+        .my-card.glow {
+            animation: glow 2s infinite alternate;
+        }
+        @media (max-width: 600px) {
+            .my-card {
+                padding: 20px;
+                font-size: 0.9rem;
+            }
+        }
+ 
+

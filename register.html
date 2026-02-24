@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+     <header>
+        <button onclick="window.location.href='/'">Home</button>
+        <button onclick="window.location.href='/login'">Login</button>
+        <button onclick="window.location.href='/products'">Products</button>
+        <button onclick="window.location.href='/cart'">Cart</button>
+        <button onclick="window.location.href='/admin'">Admin</button>
+    </header>
+    <h2>Register</h2>
+    <form method="POST">
+        Username:<input type="text" name="username" placeholder="Username" required><br><br>
+        Password:<input type="password" name="password" placeholder="Password" required><br><br>
+        phone No:<input type="number" name="number" placeholder="Phone No" required><br><br>
+        Address:<input type="text" name="address" placeholder="Address" required><br><br>
+        Email:<input type="email" name="email" placeholder="Email" required><br><br>
+        <input type="hidden" name="role" value="user">
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

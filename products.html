@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <header>
+        <button onclick="window.location.href='/'">Home</button>
+        <button onclick="window.location.href='/login'">Login</button>
+        <button onclick="window.location.href='/cart'">Cart</button>
+    </header>
+    <h2>Products</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
+    {% for product in products %}
+        <div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px;">
+            <img src="{{ url_for('static', filename='uploads/' ~ product.image) }}" 
+                 alt="{{ product.name }}" 
+                 style="width: 100%; height: auto; border-radius: 5px;">
+            <h3>{{ product.name }}</h3>
+            <p>Price: ${{ "%.2f"|format(product.price) }}</p>
+            <p>Available Quantity: {{ product.quantity }}</p>
+            <button onclick="addToCart({{ product.id }})">Add to Cart</button>
+        </div>
+    {% endfor %}
+</div>
+    <button onclick="window.location.href='/placeorder'">Place Order </button>
+</body>
+</html>
